@@ -5,21 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>全画面埋め込み</title>
     <style>
-        /* ページの余白を消して画面全体に広げる */
-        html, body {
+　　html, body {
             margin: 0;
             padding: 0;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             overflow: hidden;
             background-color: #1a1a1a;
         }
-        /* CodePenの埋め込み部分を画面いっぱいに強制拡大 */
+        /* CodePenの埋め込み部分を画面いっぱいに広げる */
         .codepen {
             width: 100% !important;
             height: 100% !important;
             margin: 0 !important;
+            border: none !important;
         }
+        /* CodePenが内部で生成するiframeも強制的に画面いっぱいにすジ */
+        .codepen iframe {
+            width: 100% !important;
+            height: 100% !important;
+        }　
     </style>
 </head>
 <body>
