@@ -3,39 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>全画面埋め込み</title>
+    <title>マインクラフト全画面</title>
     <style>
-　　html, body {
+        /* ページの余白をゼロにして、画面全体をフル活用する */
+        html, body {
             margin: 0;
             padding: 0;
-            width: 100vw;
-            height: 200vh;
+            width: 100%;
+            height: 100%;
             overflow: hidden;
             background-color: #1a1a1a;
         }
-        /* CodePenの埋め込み部分を画面いっぱいに広げる */
-        .codepen {
-            width: 100% !important;
-            height: 200% !important;
-            margin: 0 !important;
-            border: none !important;
+        /* iframeを縦横いっぱいに引き延ばす */
+        .full-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
         }
-        /* CodePenが内部で生成するiframeも強制的に画面いっぱいにすジ */
-        .codepen iframe {
-            width: 100% !important;
-            height: 200% !important;
-        }　
     </style>
 </head>
 <body>
 
-    <!-- CodePenの埋め込みコード -->
-   <p class="codepen" data-height="" data-pen-title="Minecraft" data-version="2" data-default-tab="html,result" data-slug-hash="RNpgZVK" data-user="masatann0628-sys" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/editor/masatann0628-sys/pen/01a0e013-461e-7c21-a0b1-353bb411054d">
-  Minecraft</a> by masatann0628-sys (<a href="https://codepen.io/masatann0628-sys">@masatann0628-sys</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://public.codepenassets.com/embed/index.js"></script>
+    <!-- iframeでCodePenのプレビュー（Full view）を直接読み込む -->
+    <iframe class="full-iframe" src="https://codepen.io/masatann0628-sys/full/01a0e013-461e-7c21-a0b1-353bb411054d" scrolling="no" allowfullscreen="true"></iframe>
 
 </body>
 </html>
