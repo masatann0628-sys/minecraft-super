@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>マインクラフト全画面</title>
+    <title>CodePen埋め込み全画面</title>
     <style>
-        /* ページの余白をゼロにして、画面全体をフル活用する */
+        /* 画面全体の余白を消して、ブラウザいっぱいに固定する */
         html, body {
             margin: 0;
             padding: 0;
@@ -14,19 +14,24 @@
             overflow: hidden;
             background-color: #1a1a1a;
         }
-        /* iframeを縦横いっぱいに引き延ばす */
-        .full-iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: block;
+
+        /* 埋め込みエリア自体を画面100%に広げる */
+        .codepen {
+            width: 100% !important;
+            height: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            border: none !important;
         }
     </style>
 </head>
 <body>
 
-    <!-- iframeでCodePenのプレビュー（Full view）を直接読み込む -->
-    <iframe class="full-iframe" src="https://codepen.io/masatann0628-sys/full/01a0e013-461e-7c21-a0b1-353bb411054d" scrolling="no" allowfullscreen="true"></iframe>
+    <!-- 公式の埋め込みタグ（data-heightを100%に変更済み） -->
+    <p class="codepen" data-height="100%" data-pen-title="Minecraft" data-version="2" data-default-tab="result" data-slug-hash="RNpgZVK" data-user="masatann0628-sys" style="box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: none; margin: 0; padding: 0;">
+      <span>See the Pen <a href="https://codepen.io/editor/masatann0628-sys/pen/01a0e013-461e-7c21-a0b1-353bb411054d">Minecraft</a> by masatann0628-sys (<a href="https://codepen.io/masatann0628-sys">@masatann0628-sys</a>) on <a href="https://codepen.io">CodePen</a>.</span>
+    </p>
+    <script async src="https://public.codepenassets.com/embed/index.js"></script>
 
 </body>
 </html>
